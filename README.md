@@ -2,9 +2,9 @@
 
 Rewind: an app by Mac and Farris
 
-Mac's additions: add settings,
+Mac's additions: add settings page,
 add settings icon to each page,
-add function to navigate to settings from settings icon
+add function to navigate to settings page from settings icon
 
 Farris's additions:
   add feed
