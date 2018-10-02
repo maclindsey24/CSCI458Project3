@@ -2,7 +2,9 @@
 
 Rewind: an app by Mac and Farris
 
-Mac's additions: add settings page (problems with implementing)
+Mac's additions: 
+
+                 add settings page (problems with implementing)
 
                  add settings icon to each page
 
@@ -10,7 +12,9 @@ Mac's additions: add settings page (problems with implementing)
 
 
 
-Farris's additions: add feed
+Farris's additions: 
+
+                    add feed
 
                     add cards with images, text, and like buttons 
       
