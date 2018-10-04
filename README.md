@@ -22,6 +22,10 @@ Farris's additions:
   
                     add search
     
-                    search bar (not functioning)
+                    -search bar (not functioning)
   
                     add profile
+                    
+                    -populate profile with general layout
+
+                    color scheme
