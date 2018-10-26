@@ -12,6 +12,17 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireAuthModule } from "angularfire2/auth";
+
+const firebaseAuth = {
+    apiKey: "AIzaSyAoCwR4BYLaUXQ1zZCvz1u12SfuuEnFeiU",
+    authDomain: "rewind-authentication.firebaseapp.com",
+    databaseURL: "https://rewind-authentication.firebaseio.com",
+    projectId: "rewind-authentication",
+    storageBucket: "rewind-authentication.appspot.com",
+    messagingSenderId: "33445113378"
+  };
 
 @NgModule({
   declarations: [
@@ -25,7 +36,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
