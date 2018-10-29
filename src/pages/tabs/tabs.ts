@@ -6,6 +6,12 @@ import { FeedPage } from '../feed/feed';
 import { ProfilePage } from '../profile/profile';
 import { AboutPage } from '../about/about';
 
+@IonicPage(
+{
+  name: 'tabs-page'
+}
+)
+
 @Component({
   templateUrl: 'tabs.html'
 })
