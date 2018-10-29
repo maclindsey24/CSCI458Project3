@@ -8,10 +8,22 @@ import { SearchPage } from '../pages/search/search';
 import { FeedPage } from '../pages/feed/feed';
 import { ProfilePage } from '../pages/profile/profile';
 import { AboutPage } from '../pages/about/about';
-import { TabsPage } from '../pages/tabs/tabs';
+import { tabs-page } from '../pages/tabs/tabs';
+import { TabsPageModule } from '../pages/tabs/tabs.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireAuthModule } from "angularfire2/auth";
+
+const firebaseAuth = {
+    apiKey: "AIzaSyAoCwR4BYLaUXQ1zZCvz1u12SfuuEnFeiU",
+    authDomain: "rewind-authentication.firebaseapp.com",
+    databaseURL: "https://rewind-authentication.firebaseio.com",
+    projectId: "rewind-authentication",
+    storageBucket: "rewind-authentication.appspot.com",
+    messagingSenderId: "33445113378"
+  };
 
 @NgModule({
   declarations: [
@@ -21,11 +33,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FeedPage,
     ProfilePage,
     AboutPage,
-    TabsPage
+    //TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule,
+    TabsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +50,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FeedPage,
     ProfilePage,
     AboutPage,
-    TabsPage
+    tabs-page
   ],
   providers: [
     StatusBar,
