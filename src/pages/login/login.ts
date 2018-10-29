@@ -28,7 +28,7 @@ export class LoginPage {
       const result = this.afAuth.auth.signInWithEmailAndPassword(user.email,user.password);
       console.log(result);
       if (result){
-        this.navCtrl.push('FeedPage');
+        this.navCtrl.push('tabs-page');
       }
     }
     catch (e){
