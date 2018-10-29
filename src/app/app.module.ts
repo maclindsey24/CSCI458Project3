@@ -8,7 +8,8 @@ import { SearchPage } from '../pages/search/search';
 import { FeedPage } from '../pages/feed/feed';
 import { ProfilePage } from '../pages/profile/profile';
 import { AboutPage } from '../pages/about/about';
-import { TabsPage } from '../pages/tabs/tabs';
+import { tabs-page } from '../pages/tabs/tabs';
+import { TabsPageModule } from '../pages/tabs/tabs.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,13 +33,14 @@ const firebaseAuth = {
     FeedPage,
     ProfilePage,
     AboutPage,
-    TabsPage
+    //TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    TabsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,7 +50,7 @@ const firebaseAuth = {
     FeedPage,
     ProfilePage,
     AboutPage,
-    TabsPage
+    tabs-page
   ],
   providers: [
     StatusBar,
