@@ -1,17 +1,74 @@
-<ion-header>
-  <ion-navbar>
+<ion-header text-center>
+  <ion-navbar  class="header">
     <ion-title>Feed</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="navigateToSettingsPage()">
+          <ion-icon name="settings"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="feed">
+  <ion-card class="card">
+    <ion-card-header class="user">
+      farrisswisher
+    </ion-card-header>
+    <img src="assets/imgs/tcimg1.jpg"/>
+    <ion-card-content>
+      <p>
+        Here's a pic of what's to come from me and my boys
+          Tr333 and Wavy Xantana AKA Telephone Company
+      </p>
+      <button ion-item color="light">
+      <ion-icon name="thumbs-up" item-start></ion-icon>
+      Like
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="card">
+    <ion-card-header class="user">
+      farrisswisher
+    </ion-card-header>
+    <img src="assets/imgs/VRart1.jpg"/>
+    <ion-card-content>
+      <p>
+        new tape soon, be on the lookout!
+      </p>
+      <button ion-item>
+      <ion-icon name="thumbs-up" item-start></ion-icon>
+      Like
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="card">
+    <ion-card-header class="user">
+      farrisswisher
+    </ion-card-header>
+    <img src="assets/imgs/cyberart.jpg"/>
+    <ion-card-content>
+      <p>
+        Cyberspace out on all platforms now!
+      </p>
+      <button ion-item>
+        <ion-icon name="thumbs-up" item-start></ion-icon>
+        Like
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="card">
+    <ion-card-header class="user">
+      farrisswisher
+    </ion-card-header>
+    <img src="assets/imgs/GT4k.jpg"/>
+    <ion-card-content>
+      <p>
+        New album Giving Tree 4k out everywhere NOW!
+      </p>
+      <button ion-item>
+        <ion-icon name="thumbs-up" item-start></ion-icon>
+        Like
+      </button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
