@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs'; import 'rxjs/add/operator/map';
 
 @IonicPage()
 @Component({
@@ -8,8 +10,19 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class FeedPage {
 
-  constructor(public navCtrl: NavController) {
+  arrData = []
+  myInput
 
+  constructor(public navCtrl: NavController, private fdb: AngularFireDatabase) {
+    this.fdb.list("/Feed/").valueChanges().subscribe(_data => {
+      this.arrData = _data;
+
+      console.log(this.arrData);
+    });
+  }
+
+  btnAddClicked(){
+    this.fdb.list("/Feed/").push(this.myInput);
   }
 
 }
