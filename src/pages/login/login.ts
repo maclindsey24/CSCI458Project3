@@ -39,4 +39,9 @@ export class LoginPage {
   register() {
     this.navCtrl.push('RegisterPage');
   }
+
+  forgotPage() {
+    this.navCtrl.push('ForgotPage');
+  }
+
 }
