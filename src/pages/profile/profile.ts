@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireAuth } from "angularfire2/auth";
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private afAuth: AngularFireAuth,
+    public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
+    this.navCtrl.push('LoginPage');
   }
 
 }
