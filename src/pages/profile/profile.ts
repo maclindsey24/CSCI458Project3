@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
 
 /**
@@ -16,7 +16,7 @@ import { AngularFireAuth } from "angularfire2/auth";
 })
 export class ProfilePage {
 
-  constructor(private afAuth: AngularFireAuth,
+  constructor(private afAuth: AngularFireAuth, public app: App,
     public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -26,7 +26,7 @@ export class ProfilePage {
 
   logout() {
     this.afAuth.auth.signOut();
-    this.navCtrl.push('LoginPage');
+    this.app.getRootNav().setRoot('LoginPage');
   }
 
 }
