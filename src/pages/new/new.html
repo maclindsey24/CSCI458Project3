@@ -1,0 +1,25 @@
+<!--
+  Generated template for the NewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header text-center>
+
+  <ion-navbar>
+    <ion-title>Choose Username</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class='new'>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" [(ngModel)] = "account.username"></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="userName()">Complete Registration</button>
+
+</ion-content>
