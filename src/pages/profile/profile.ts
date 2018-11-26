@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
 import { AngularFireDatabase } from "angularfire2/database";
 import { Observable } from "rxjs/Observable";
+import { SettingsPage } from "../settings/settings"
 
 /**
  * Generated class for the ProfilePage page.
@@ -38,5 +39,9 @@ export class ProfilePage {
     this.afAuth.auth.signOut();
     this.app.getRootNav().setRoot('LoginPage');
   }
+
+  navigateToSettingsPage(): void {
+    this.navCtrl.push(SettingsPage);
+ }
 
 }

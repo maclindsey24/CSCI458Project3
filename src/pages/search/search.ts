@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SettingsPage } from "../settings/settings"
 
 @Component({
   selector: 'page-search',
@@ -10,7 +11,7 @@ export class SearchPage {
   searchQuery: string = '';
   items: string[];
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
     this.initializeItems();
   }
 
@@ -38,5 +39,9 @@ export class SearchPage {
       })
     }
   }
+
+  navigateToSettingsPage(): void {
+    this.navCtrl.push(SettingsPage);
+ }
 
 }
