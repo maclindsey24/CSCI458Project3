@@ -7,7 +7,7 @@
 <ion-header text-center>
 
   <ion-navbar>
-    <ion-title>farrisswisher</ion-title>
+    <ion-title>{{(profileData | async)?.username}}</ion-title>
     <ion-buttons float-left>
         <button ion-button (click)="logout()">
           <ion-icon name="exit"></ion-icon>
