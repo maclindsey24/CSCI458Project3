@@ -27,6 +27,9 @@ export class RegisterPage {
     try{
     const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email,user.password);
     console.log(result);
+    const result2 = await this.afAuth.auth.signInWithEmailAndPassword(user.email,user.password);
+    console.log(result2);
+    this.navCtrl.push('NewPage');
     }
     catch (e) {
       console.error(e);
