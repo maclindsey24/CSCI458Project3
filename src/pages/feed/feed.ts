@@ -6,7 +6,7 @@ import { SettingsPage } from "../settings/settings"
 import { LoadingController, ToastController } from 'ionic-angular';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { Toast } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -17,11 +17,11 @@ export class FeedPage {
 
   arrData = []
   myInput
-  imageURI:any;
-imageFileName:any;
+  imageURI:Observable<any>;
+  imageFileName:Observable<any>;
 
-  constructor(public navCtrl: NavController, private fdb: AngularFireDatabase, private transfer: FileTransfer,
-    private camera: Camera,
+  constructor(public navCtrl: NavController, private fdb: AngularFireDatabase,
+    private transfer: FileTransfer, private camera: Camera,
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController) {
     this.fdb.list("/Feed/").valueChanges().subscribe(_data => {
