@@ -17,8 +17,8 @@ export class FeedPage {
 
   arrData = []
   myInput
-  imageURI:Observable<any>;
-  imageFileName:Observable<any>;
+  imageURI:any;
+  imageFileName:any;
 
   constructor(public navCtrl: NavController, private fdb: AngularFireDatabase, 
     private transfer: FileTransfer, private camera: Camera,
